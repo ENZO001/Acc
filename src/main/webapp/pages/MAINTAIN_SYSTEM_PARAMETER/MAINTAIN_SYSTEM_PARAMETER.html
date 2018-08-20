@@ -1,0 +1,43 @@
+<div ng-controller="maintainSystemParameterController" class="container">
+	<h1>{{ textMessage }}</h1>
+	
+	<div></div>
+	
+	<table class="table">
+		<thead class="thead-light">
+		    <tr>
+		    	<th scope="col">{{ textArray[0] }}</th>
+		    </tr>
+	  	</thead>
+	  	<tbody>
+		    <tr ng-repeat="accConsumptionType in accConsumptionTypesList track by $index">
+		    	<td>{{ accConsumptionType.typeName }}</td>
+		    </tr>
+	  	</tbody>
+	</table>
+	<table class="table">
+		<thead class="thead-light">
+		    <tr>
+		    	<th scope="col">{{ textArray[2] }}</th>
+		    </tr>
+	  	</thead>
+	  	<tbody>
+		    <tr ng-repeat="accConsumptionPattern in accConsumptionPatternsList track by $index">
+		    	<td>{{ accConsumptionPattern.patternName }}</td>
+		    </tr>
+	  	</tbody>
+	</table>
+	<table class="table">
+		<thead class="thead-light">
+		    <tr>
+		    	<th scope="col" colspan="2">{{ textArray[3] }}</th>
+		    </tr>
+	  	</thead>
+	  	<tbody>
+		    <tr ng-repeat="accAccount in accAccountsList track by $index">
+		    	<td>{{ accAccount.accountBank }}</td>
+		    	<td>{{ accAccount.accountBalance }}</td>
+		    </tr>
+	  	</tbody>
+	</table>
+</div>
